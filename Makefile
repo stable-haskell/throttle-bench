@@ -79,10 +79,10 @@ setup: $(THROTTLE_BIN) $(STATUS_BIN) ## One-time setup (build ghc-throttle)
 	@printf '  throttle: $(THROTTLE_BIN)\n'
 
 $(THROTTLE_BIN): $(THROTTLE_SRC) | _build
-	$(CC) -O2 -Wall -Wextra -pedantic -o $@ $<
+	$(DEVX) cc -O2 -Wall -Wextra -pedantic -o $@ $<
 
 $(STATUS_BIN): $(STATUS_SRC) | _build
-	$(CC) -O2 -Wall -Wextra -pedantic -o $@ $<
+	$(DEVX) cc -O2 -Wall -Wextra -pedantic -o $@ $<
 
 _build:
 	@mkdir -p _build
