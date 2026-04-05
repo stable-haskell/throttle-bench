@@ -171,7 +171,7 @@ build-type: Simple
 
 library
     default-language: Haskell2010
-    build-depends: $pkg
+    build-depends: base, $pkg
     exposed-modules: Lib
 CABAL
 
